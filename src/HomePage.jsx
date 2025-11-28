@@ -13,8 +13,8 @@ function HomePage(){
         <main className="hero">
             <div className="hero-content">
                <h1>
-                  Elevate Your Style  
-                   <br /> With <span>AE Cuts</span>
+                  Elevate Your Style With
+                   <br />  <span>AE Cuts</span>
                </h1> 
                 <p>Premium fades, clean shaves, and detailed grooming designed for the modern man.</p>
                 <Link to="/booking" className=" book-btn">Book an Appointment</Link>

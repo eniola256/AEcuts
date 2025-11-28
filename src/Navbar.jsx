@@ -24,7 +24,9 @@ content_cut
           </li>
       </ul>
 
-    <Link to="/booking" className="book-btn desktop-only">Book Now</Link>
+      <div className="desc-btn">
+    <Link to="/booking" className=" desktop-only book-btn">Book Now</Link>
+    </div>
 
       <div className="menu-icon" onClick={() => setOpen(!open)}>
         {open ? "✕" : "☰"}
