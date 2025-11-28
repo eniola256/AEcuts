@@ -1,0 +1,138 @@
+:root {
+  --black: #0d0d0d;
+  --white: #ffffff;
+  --gold: #f1c40f;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+  width: 100%;
+  padding: 20px 50px;
+  background: var(--white);
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(133, 122, 122, 0.199);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+.logo span {
+  color: var(--gold);
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links a {
+  position: relative;
+  color: var(--black);
+  text-decoration: none;
+  padding-bottom: 5px;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--gold);
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Book button */
+.nav-btn {
+  background: var(--gold);
+  color: var(--black);
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  opacity: 0.85;
+}
+
+/* Hide menu icon */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.mobile-only{
+  display: none;
+}
+
+/* ========= MOBILE ======= */
+
+@media (max-width: 768px) {
+
+  .desktop-only {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: -300px;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    transition: 0.3s ease;
+    text-align: center;
+    border-top: 1px solid rgba(0,0,0,0.1);
+  }
+
+  .nav-links.open {
+    top: 80px;
+  }
+
+  /* NEW — separators */
+  .nav-links li {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    font-size: 20px;
+  }
+
+  .nav-links li:last-child {
+    border-bottom: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+}
+
